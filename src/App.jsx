@@ -1,21 +1,12 @@
 import { useState } from 'react';
-import roatanImg from './assets/Roatan.jpg';
-import copanImg from './assets/Copan.jpg';
-import picoBonitoImg from './assets/PicoBonito.jpg';
-import snorkelImg from './assets/Buseo.jpg';
-import canopyImg from './assets/Canopy.jpg';
-import culturalImg from './assets/Museo.jpg';
-
-
-
 
 // Placeholder images using the placeholder API
-const roatanImg = "/api/placeholder/800/600";
-const copanImg = "/api/placeholder/800/600";
-const picoBonitoImg = "/api/placeholder/800/600";
-const snorkelImg = "/api/placeholder/800/600";
-const canopyImg = "/api/placeholder/800/600";
-const culturalImg = "/api/placeholder/800/600";
+const roatanImg = "/src/assets/Roatan.jpg";
+const copanImg = "/src/assets/Copan.jpg";
+const picoBonitoImg="/src/assets/PicoBonito.jpg";
+const snorkelImg = "/src/assets/Buseo.jpg";
+const canopyImg = "/src/assets/Canopy.jpg";
+const culturalImg = "/src/assets/Museo.jpg";
 
 // Icons components remain the same
 const MenuIcon = () => (
