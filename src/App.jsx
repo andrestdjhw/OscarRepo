@@ -1,6 +1,23 @@
 import { useState } from 'react';
+import roatanImg from './assets/Roatan.jpg';
+import copanImg from './assets/Copan.jpg';
+import picoBonitoImg from './assets/PicoBonito.jpg';
+import snorkelImg from './assets/Buseo.jpg';
+import canopyImg from './assets/Canopy.jpg';
+import culturalImg from './assets/Museo.jpg';
 
-// Iconos de menu
+
+
+
+// Placeholder images using the placeholder API
+const roatanImg = "/api/placeholder/800/600";
+const copanImg = "/api/placeholder/800/600";
+const picoBonitoImg = "/api/placeholder/800/600";
+const snorkelImg = "/api/placeholder/800/600";
+const canopyImg = "/api/placeholder/800/600";
+const culturalImg = "/api/placeholder/800/600";
+
+// Icons components remain the same
 const MenuIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -62,6 +79,7 @@ const InstagramIcon = () => (
   </svg>
 );
 
+// Main component
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -123,9 +141,9 @@ export default function App() {
         )}
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Section with background image */}
       <section className="relative">
-        <div className="bg-blue-600 h-96 w-full flex items-center justify-center">
+        <div className="bg-blue-600 h-96 w-full flex items-center justify-center bg-cover bg-center" style={{backgroundImage: `url(/api/placeholder/1600/900)`, backgroundBlendMode: 'overlay', backgroundColor: 'rgba(37, 99, 235, 0.7)'}}>
           <div className="text-center px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Descubre Honduras</h1>
             <p className="text-xl text-white mb-8">Experimente la magia de America Central, Tesoro Oculto</p>
@@ -136,7 +154,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Destinations Section */}
+      {/* Destinations Section with images */}
       <section id="destinations" className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -145,9 +163,15 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Card 1 */}
+            {/* Card 1 with image */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-48 bg-gray-300"></div>
+              <div className="h-48 bg-gray-300 relative overflow-hidden">
+                <img 
+                  src={roatanImg} 
+                  alt="Isla de Roatán" 
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900">Isla de Roatán</h3>
                 <p className="mt-2 text-gray-600">
@@ -159,9 +183,15 @@ export default function App() {
               </div>
             </div>
 
-            {/* Card 2 */}
+            {/* Card 2 with image */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-48 bg-gray-300"></div>
+              <div className="h-48 bg-gray-300 relative overflow-hidden">
+                <img 
+                  src={copanImg} 
+                  alt="Copán Ruinas" 
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900">Copán Ruinas</h3>
                 <p className="mt-2 text-gray-600">
@@ -173,9 +203,15 @@ export default function App() {
               </div>
             </div>
 
-            {/* Card 3 */}
+            {/* Card 3 with image */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-48 bg-gray-300"></div>
+              <div className="h-48 bg-gray-300 relative overflow-hidden">
+                <img 
+                  src={picoBonitoImg} 
+                  alt="Parque Nacional Pico Bonito" 
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900">Parque Nacional Pico Bonito</h3>
                 <p className="mt-2 text-gray-600">
@@ -190,7 +226,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Activities Section */}
+      {/* Activities Section with images */}
       <section id="activities" className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -199,9 +235,15 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Activity Card 1 */}
+            {/* Activity Card 1 with image */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-48 bg-gray-300"></div>
+              <div className="h-48 bg-gray-300 relative overflow-hidden">
+                <img 
+                  src={snorkelImg} 
+                  alt="Buseo y snorkel" 
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900">Buseo y snorkel</h3>
                 <p className="mt-2 text-gray-600">
@@ -210,9 +252,15 @@ export default function App() {
               </div>
             </div>
 
-            {/* Activity Card 2 */}
+            {/* Activity Card 2 with image */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-48 bg-gray-300"></div>
+              <div className="h-48 bg-gray-300 relative overflow-hidden">
+                <img 
+                  src={canopyImg} 
+                  alt="Canopy" 
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900">Canopy</h3>
                 <p className="mt-2 text-gray-600">
@@ -221,9 +269,15 @@ export default function App() {
               </div>
             </div>
 
-            {/* Activity Card 3 */}
+            {/* Activity Card 3 with image */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-48 bg-gray-300"></div>
+              <div className="h-48 bg-gray-300 relative overflow-hidden">
+                <img 
+                  src={culturalImg} 
+                  alt="Tours Culturales" 
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900">Tours Culturales</h3>
                 <p className="mt-2 text-gray-600">
@@ -244,7 +298,7 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-8 rounded-lg">
+            <div className="bg-gray-50 p-8 rounded-lg shadow">
               <form onSubmit={handleSubmit}>
                 <div className="mb-6">
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
@@ -291,7 +345,7 @@ export default function App() {
               </form>
             </div>
             
-            <div className="bg-gray-50 p-8 rounded-lg">
+            <div className="bg-gray-50 p-8 rounded-lg shadow">
               <h3 className="text-xl font-semibold text-gray-900 mb-6">Informacion</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
